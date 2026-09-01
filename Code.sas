@@ -1,3 +1,4 @@
+ODS RTF;
 Data cows;
 input price age bred angus frame weight conditioned registered;
 datalines;
@@ -128,3 +129,4 @@ PROC REG DATA= COWS ALPHA= 0.05;
 MODEL price= age bred angus frame weight conditioned registered/ CLB R VIF SELECTION=
 BACKWARD SLS=0.05 LACKFIT DW ;
 RUN;
+ODS RTF CLOSE;
